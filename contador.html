@@ -1,0 +1,130 @@
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <style>
+  table {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+    margin: 0 0 1em 0;
+    caption-side: top;
+  }
+  caption, td, th {
+    padding: 0.3em;
+  }
+  th, td {
+    border-bottom: 1px solid #000;
+    border-right: 1px solid #000;
+  }
+  th:lastchild, td:lastchild {
+      border-right: 0;
+  }
+  th {
+    width: 25%;
+  }
+  </style>
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="tools.css">
+  <script src="assets/js/tools.js"></script>
+</head>
+<body style="background-color: rgba(192, 127, 90, 0.68);">
+
+
+<div class="tools-container"> 
+
+  <div class="energy-calculator-container">
+      
+
+
+      <div class="parts-container">
+        <div class="parts-container-grid">
+            <div id="axie1Grid" class="parts-grid-item axie1">
+                
+                <div class="mouth">
+                    <div id="a1mButton" class="part-button" role="button" aria-pressed="false">
+                        <button class="" onclick="usePartA1M()"><img id="a1m" src="assets/img/done.svg"></button>
+                    </div>
+                    <div id="a1mLabel" class="part-label" role="button" aria-pressed="false">
+                        <label id="wCounter" class="" onclick="substractPartA1M()">0</label>
+                    </div>
+                </div>
+                
+            </div>
+      
+            <div id="axie2Grid" class="parts-grid-item axie2">
+                
+                <div class="mouth">
+                    <div id="a2mButton" class="part-button">
+                        <button class="" onclick="usePartA2M()"><img id="a2m" src="assets/img/fail.svg"></button>
+                    </div>
+                    <div id="a2mLabel" class="part-label" role="button" aria-pressed="false">
+                        <label id="lCounter" onclick="substractPartA2M()">0</label>
+                    </div>
+                </div>
+                
+                
+                
+                
+            </div>
+      
+            <div id="axie3Grid" class="parts-grid-item axie3">
+                
+                <div class="mouth">
+                    <div id="a3mButton" class="part-button">
+                        <button onclick="usePartA3M()"><img id="a3m" src="assets/img/draw.svg"></button>
+                    </div>
+                    <div id="a3mLabel" class="part-label" role="button" aria-pressed="false">
+                        <label id="dCounter" onclick="substractPartA3M()">0</label>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+    <div class="round-container">
+        <div class="round-info">
+            <span>Ronda&nbsp;</span>
+            <span id="roundNumber" class="">1</span>
+        </div>
+
+        <div class="energy-quantity">
+            <img class="axie-match-energy" src="assets/img/matchEnergyIcon.svg" alt="Ícono con la cantidad de energía del oponente">
+
+            <span>
+                <b id="actualEnergy" class="actual-energy">3</b>
+                <b class="energy-divider">/</b>
+                <b id="maxEnergy" class="max-energy">10</b>
+            </span>
+        </div>
+    </div>
+
+    <div class="ene-gain-loss-container">
+        <div class="energy-tools">
+            <button onclick="subtract()"><i class="fas fa-minus"></i>&nbsp;-1 Energía</button>
+            <button onclick="add()"><i class="fas fa-plus"></i>&nbsp;+1 Energía</button>
+        </div>
+
+        <div class="energy-tools">
+            <button id="nextRound" onclick="nextRound()">Siguiente Ronda</button>
+            <button id="newArena" onclick="reset()">Nueva Partida</button>
+        </div>
+    </div>
+</div>
+
+</div>
+</body>
+
+
+</html>
+
